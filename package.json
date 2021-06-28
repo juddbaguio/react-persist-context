@@ -2,9 +2,11 @@
   "name": "react-persist-context",
   "version": "1.0.0",
   "description": "Persisting state management library built on top of React context",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "author": "Judd Misael R. Baguio",
   "license": "ISC",
