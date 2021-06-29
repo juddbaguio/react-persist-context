@@ -1,6 +1,6 @@
 {
   "name": "react-persist-context",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Persisting state management library built on top of React context",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
