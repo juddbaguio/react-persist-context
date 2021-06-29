@@ -1,6 +1,6 @@
 {
   "name": "react-persist-context",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Persisting state management library built on top of React context",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -9,6 +9,10 @@
     "build": "rollup -c"
   },
   "author": "Judd Misael R. Baguio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juddbaguio/react-persist-context"
+  },
   "license": "ISC",
   "peerDependencies": {
     "react": "^17.0.2",
