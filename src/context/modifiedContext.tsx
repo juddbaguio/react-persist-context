@@ -9,7 +9,9 @@ interface ProviderPropType {
 
 const ModifiedContext = createContext<any>(null)
 
-export const usePersistedContext = () => useContext(ModifiedContext)
+export const usePersistedContext = () => {
+    return useContext(ModifiedContext)
+}
 
 
 export const PersistContextProvider: React.FC<ProviderPropType> = ({ children, store = null }) => {
