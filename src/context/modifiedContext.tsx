@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useReducer, useRef } from "react";
-import persistData, { cookies } from "../controllers/persistData";
+import { cookies } from "../controllers/persistData";
+import persistData from "../controllers/persistData";
 import { StoreType } from "./createStore";
 
 interface ProviderPropType {
@@ -14,7 +15,7 @@ export const usePersistedContext = () => {
 }
 
 
-export const PersistContextProvider: React.FC<ProviderPropType> = ({ children, store = null }) => {
+export const PersistContextProvider: React.FC<ProviderPropType> = ({ children, store = {} }) => {
     const isMounted = useRef(false)
     const [state, dispatch] = useReducer(store?.reducer || (() => {}), store?.state || {}, persistData)
 
