@@ -17,10 +17,10 @@ export const usePersistedContext = () => {
 
 export const PersistContextProvider: React.FC<ProviderPropType> = ({ children, store = {} }) => {
     const isMounted = useRef(false)
-    const [state, dispatch] = useReducer(store?.reducer || (() => {}), store?.state || {}, persistData)
+    const [state, dispatch] = useReducer(store?.reducer || (() => {}), persistData(store?.state) || {})
 
     useEffect(() => {
-        if (isMounted.current) {
+        if (!isMounted.current) {
             isMounted.current = true
         } else {
             cookies.set('react-persisted-data', state)
@@ -31,7 +31,8 @@ export const PersistContextProvider: React.FC<ProviderPropType> = ({ children, s
         <ModifiedContext.Provider value={{
             state,
             dispatch
-        }}>
+        }}
+        >
             {children}
         </ModifiedContext.Provider>
     )
