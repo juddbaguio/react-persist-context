@@ -38,7 +38,7 @@ After initializing your provider, you can now access the persisted context using
 // component who is accessing
 import { usePersistedContext } from 'react-persist-context'
 
-const CompononedWhoIsUsing = () => {
+const CompononentWhoIsUsing = () => {
     const { state, dispatch } = usePersistedContext()
     /* rest of the code*/
     return (...)
